@@ -29,10 +29,10 @@ for index in range(1, 21):
 # ------ Exercise 3
 
 
-    my_name = "achraf"
+my_name = "achraf"
 
 while True:
-    name = input("Quel est ton nom ? ").strip()
+    name = input("Quel est ton nom ? ")
     if name.lower() == my_name.lower():
         print("Bravo, c’est bien toi !")
         break

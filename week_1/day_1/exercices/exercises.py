@@ -80,7 +80,7 @@ while "Pastrami sandwich" in sandwich_orders:
 finished_sandwiches = []
 
 while sandwich_orders:
-    current_sandwich = sandwich_orders.pop(0)
+    current_sandwich = sandwich_orders.remove(0)
     finished_sandwiches.append(current_sandwich)
 
 for sandwich in finished_sandwiches:
