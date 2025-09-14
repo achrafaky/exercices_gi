@@ -1,9 +1,29 @@
-// ===== Exercise 1
+<select id="genres">
+  <option value="rock">Rock</option>
+  <option value="blues" selected>Blues</option>
+</select>
 
-// ===== Exercise 2
+<p id="selectedValue"></p>
 
-// ===== Exercise 3
+<script>
+  const select = document.getElementById("genres");
+  const display = document.getElementById("selectedValue");
 
-// ===== Exercise 4
+  // Show initial selected value
+  display.textContent = "Selected: " + select.value;
 
-// ===== Exercise ...
+  // Update when selection changes
+  select.addEventListener("change", () => {
+    display.textContent = "Selected: " + select.value;
+  });
+
+  // Add new option
+  const newOption = document.createElement("option");
+  newOption.value = "classic";
+  newOption.text = "Classic";
+  newOption.selected = true; // make default
+  select.appendChild(newOption);
+
+  // Update displayed value since Classic is now selected
+  display.textContent = "Selected: " + select.value;
+</script>
